@@ -1,5 +1,5 @@
 From 21a33e34bebefffe1fd3e13dd517952e87d5b5b4 Mon Sep 17 00:00:00 2001
-From: Amerika Box <box@amerika.invalid>
+From: MakBox <box@amerika.invalid>
 Date: Wed, 21 Oct 2026 17:32:00 -0700
 Subject: [PATCH 1/2] Offline build: bundle the MP3 encoder, drop the service
  worker and URL-sharing services
@@ -18,7 +18,7 @@ index 288a786..1262813 100644
  		} else {
  			var script = document.createElement("script");
 -			script.src = "https://cdn.jsdelivr.net/npm/lamejs@1.2.0/lame.min.js";
-+			script.src = "amerika/vendor/lame.min.js"; // AmerikaBox: bundled locally instead of loaded from a CDN.
++			script.src = "amerika/vendor/lame.min.js"; // MakBox: bundled locally instead of loaded from a CDN.
  			script.onload = whenEncoderIsAvailable;
  			document.head.appendChild(script);
  		}
@@ -55,7 +55,7 @@ index e7ec79c..a2268fb 100644
 -		if ("serviceWorker" in navigator) {
 -			navigator.serviceWorker.register("/service_worker.js", {updateViaCache: "all", scope: "/"}).catch(() => {});
 -		}
-+		// AmerikaBox: no service worker (the app is local and never touches the network).
++		// MakBox: no service worker (the app is local and never touches the network).
  	}
  	
  	private _whenResized = (): void => {

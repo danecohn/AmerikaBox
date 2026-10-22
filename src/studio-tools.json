@@ -1,0 +1,156 @@
+{
+  "apps": {
+    "box": {
+      "title": "AmerikaBox",
+      "launcher": "amerika-box",
+      "tools": [
+        {
+          "name": "song.get",
+          "description": "Return the current song as BeepBox song JSON.",
+          "risk": "read",
+          "timeout": 60,
+          "inputSchema": {
+            "type": "object",
+            "properties": {},
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "song.set",
+          "description": "Replace the current song with BeepBox song JSON.",
+          "risk": "act",
+          "timeout": 60,
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "song": {
+                "type": "object",
+                "description": "BeepBox song JSON object"
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "song"
+            ]
+          }
+        },
+        {
+          "name": "song.compose_from_description",
+          "description": "Ask Claude (through AmerikaBox's assistant) to compose a chiptune song from a description and load it.",
+          "risk": "act",
+          "timeout": 600,
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "description": {
+                "type": "string",
+                "description": "Mood, genre, tempo, length, instruments"
+              },
+              "bars": {
+                "type": "integer",
+                "description": "Approximate length in bars",
+                "minimum": 1,
+                "maximum": 256
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "description"
+            ]
+          }
+        },
+        {
+          "name": "song.apply_change",
+          "description": "Change the current song according to an instruction (add a bass line, speed up, change key...).",
+          "risk": "act",
+          "timeout": 600,
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "instruction": {
+                "type": "string",
+                "description": "The change to make"
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "instruction"
+            ]
+          }
+        },
+        {
+          "name": "play",
+          "description": "Start playback.",
+          "risk": "act",
+          "timeout": 60,
+          "inputSchema": {
+            "type": "object",
+            "properties": {},
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "stop",
+          "description": "Stop playback.",
+          "risk": "act",
+          "timeout": 60,
+          "inputSchema": {
+            "type": "object",
+            "properties": {},
+            "additionalProperties": false
+          }
+        },
+        {
+          "name": "export.wav",
+          "description": "Render the song to a WAV file in the project folder.",
+          "risk": "act",
+          "timeout": 300,
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string",
+                "description": "Path relative to the project directory (never absolute, never containing ..)"
+              },
+              "loops": {
+                "type": "integer",
+                "description": "Number of loops",
+                "minimum": 1,
+                "maximum": 8
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "path"
+            ]
+          }
+        },
+        {
+          "name": "app.prompt",
+          "description": "Send a natural-language instruction to this app's built-in Claude assistant (the same chat panel the user sees) and return its final reply plus a summary of the tool calls it made.",
+          "risk": "act",
+          "timeout": 600,
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "message": {
+                "type": "string",
+                "description": "Instruction for the assistant"
+              },
+              "timeout_s": {
+                "type": "integer",
+                "description": "Max seconds to wait",
+                "minimum": 5,
+                "maximum": 900
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "message"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,4 +1,4 @@
-"""AmerikaBox: Node tests against BeepBox's real synth (skipped if the dev Node is missing), WAV checks read with Python's
+"""MakBox: Node tests against BeepBox's real synth (skipped if the dev Node is missing), WAV checks read with Python's
 wave module, packaging and contract checks. The WebKit rig test lives in src/os/box/test/rig/ (run via tests/rig/studio-rig.sh)."""
 import hashlib
 import json
@@ -13,7 +13,7 @@ from pathlib import Path
 
 _REAL_RUN = subprocess.run   # other test modules may monkeypatch subprocess.run and leak it; keep the real one
 ROOT = Path(__file__).resolve().parents[1]
-BOX = ROOT / 'src/os/box'
+BOX = ROOT / 'src'
 NODE = next((str(p) for p in (ROOT.parent / 'tools/node/bin/node', Path(shutil.which('node') or '/nonexistent')) if p.exists()), None)
 
 
@@ -23,7 +23,7 @@ class NodeSuite(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         if not NODE:
-            raise unittest.SkipTest('node is not available (expected ../tools/node/bin/node); the AmerikaBox Node tests were NOT run')
+            raise unittest.SkipTest('node is not available (expected ../tools/node/bin/node); the MakBox Node tests were NOT run')
         subprocess.run = _REAL_RUN
         cls.out = tempfile.mkdtemp(prefix='box-test-')
         env = dict(os.environ, BOX_TEST_OUT=cls.out)
@@ -88,7 +88,7 @@ class Packaging(unittest.TestCase):
 
     def test_desktop_entry_and_launcher(self):
         d = (BOX / 'applications/amerika-box.desktop').read_text()
-        self.assertIn('Name=AmerikaBox', d)
+        self.assertIn('Name=MakBox', d)
         self.assertIn('Exec=amerika-box', d)
         self.assertIn('Icon=amerika-box', d)
         launcher = (BOX / 'bin/amerika-box').read_text()
@@ -97,7 +97,7 @@ class Packaging(unittest.TestCase):
         subprocess.run(['sh', '-n', str(BOX / 'bin/amerika-box')], check=True)
 
     def test_every_box_tool_in_tools_json_has_an_rpc_handler(self):
-        tools = json.loads((ROOT / 'src/os/studio/tools.json').read_text())['apps']['box']['tools']
+        tools = json.loads((ROOT / 'src/studio-tools.json').read_text())['apps']['box']['tools']
         rpc = (BOX / 'app/amerika/rpc.js').read_text()
         for t in tools:
             self.assertIn('"%s"' % t['name'], rpc, t['name'])

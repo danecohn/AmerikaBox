@@ -1,4 +1,4 @@
-/* AmerikaBox: the "amerika" colour theme for BeepBox (neon on dark chrome). Derived from BeepBox's own "dark classic"
+/* MakBox: the "amerika" colour theme for BeepBox (neon on dark chrome). Derived from BeepBox's own "dark classic"
  * variables at start-up, so upstream themes stay untouched and new upstream variables are inherited. */
 (function (root) {
 	"use strict";

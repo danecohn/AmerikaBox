@@ -1,5 +1,5 @@
 From e70b2f683377c89adb92a38ffff10c2bd6d583cc Mon Sep 17 00:00:00 2001
-From: Amerika Box <box@amerika.invalid>
+From: MakBox <box@amerika.invalid>
 Date: Wed, 21 Oct 2026 17:32:00 -0700
 Subject: [PATCH 2/2] Shell hooks: amerika-editor-ready event, amerikaSaveBlob
  save hook, export ChangeSong and SongRenderer
@@ -18,7 +18,7 @@ index 1262813..fb0f055 100644
  }
  
  function save(blob: Blob, name: string): void {
-+	// AmerikaBox: the desktop shell saves files through its own file dialog.
++	// MakBox: the desktop shell saves files through its own file dialog.
 +	const amerikaSave: any = (<any>window)["amerikaSaveBlob"];
 +	if (typeof amerikaSave == "function") {
 +		amerikaSave(blob, name);
@@ -34,7 +34,7 @@ index a2268fb..9ac54fb 100644
 @@ -681,6 +681,8 @@ export class SongEditor {
  		if ("scrollRestoration" in history) history.scrollRestoration = "manual";
  		
- 		// AmerikaBox: no service worker (the app is local and never touches the network).
+ 		// MakBox: no service worker (the app is local and never touches the network).
 +		// and tell the Amerika layer that the editor is up.
 +		window.dispatchEvent(new CustomEvent("amerika-editor-ready", {detail: {editor: this, doc: this.doc}}));
  	}

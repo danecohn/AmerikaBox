@@ -1,7 +1,7 @@
-# AmerikaBox
+# MakBox
 
-AmerikaBox is a desktop copy of **BeepBox** (John Nesky, MIT) with an AI composer. It runs in the shared
-`amerika-studio-webview` window (see `webview.md`). AmerikaBox is **not affiliated** with BeepBox or John Nesky;
+MakBox is a desktop copy of **BeepBox** (John Nesky, MIT) with an AI composer. It runs in the shared
+`amerika-studio-webview` window (see `webview.md`). MakBox is **not affiliated** with BeepBox or John Nesky;
 beepbox.co is a separate hosted site. Credit lives in About, `NOTICE`, the package `copyright`, and the licence text
 (`/usr/share/doc/amerika-box/LICENSE-BeepBox.md`).
 
@@ -33,7 +33,7 @@ separate files, so upstream updates only need the two small patches to apply. To
 (clones, `git am`s the patches, builds with Node, copies the two min.js files). If a patch no longer applies, fix it in the printed scratch clone,
 `git format-patch` into `patches/`, then refresh `beepbox.lock.json` (commit, tarball hash printed by the script, built hashes) and run the tests.
 
-## Amerika Composer
+## Composer
 
 Side panel docked in the editor. `amerikaStudio.AIClient` (from studio-core) runs the tool loop in the page; the bridge holds the key.
 Tools (`app/amerika/songtools.js`), all validated through BeepBox's `Song.toJsonObject/fromJsonObject` and committed as a BeepBox
@@ -62,7 +62,7 @@ Music-theory helpers: scales, chord/progression parsing (roman numerals or names
   stopped with the window). The page writes `exports/.jobs/<id>.job.json`; the helper answers `<id>.result.json`; paths are confined to `~/Studio/Box`.
   Without it the WAV bundle is still written; `amerika-box-ogg file.wav --loop-start N --loop-length N` converts later.
 
-## Control endpoint (Amerika Agent)
+## Control endpoint (local automation)
 
 `window.amerikaStudio.onRpc` implements the `box.*` tools of `src/os/studio/tools.json`: `song.get`, `song.set`, `song.compose_from_description`,
 `song.apply_change`, `play`, `stop`, `export.wav` (`path` relative to the project, `loops` 1-8; add `return_audio:true` to also get `audio:{mime,base64}`),
