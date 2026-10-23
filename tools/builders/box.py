@@ -1,4 +1,4 @@
-"""MakBox: BeepBox (MIT) built for the desktop, with the Composer. Static app + launcher + Ogg helper."""
+"""AltStack Box: BeepBox (MIT) built for the desktop, with the Composer. Static app + launcher + Ogg helper."""
 import json
 import shutil
 from pathlib import Path
@@ -9,11 +9,11 @@ def register(b):
         src = b.OS / 'box'
         lock = json.loads((src / 'beepbox.lock.json').read_text())
         p = b.Pkg('amerika-box', b.DE_VERSION,
-                  'MakBox, a chiptune maker built on BeepBox\n'
+                  'AltStack Box, a chiptune maker built on BeepBox\n'
                   'A desktop copy of BeepBox (by John Nesky, MIT licence; not affiliated) in the Studio window, with an AI composer '
                   'that writes and edits songs through BeepBox\'s own song format, WAV/MP3/MIDI export and "Export for game" loop bundles.',
                   arch='all', depends=f'amerika-studio (>= {b.DE_VERSION}), gir1.2-webkit-6.0, python3',
-                  recommends='ffmpeg', title='MakBox', category='Audio')
+                  recommends='ffmpeg', title='AltStack Box', category='Audio')
         app = p.path('/usr/share/amerika-box/app')
         shutil.copytree(src / 'app', app, ignore=shutil.ignore_patterns('*.map', '__pycache__'))
         about = app / 'amerika/about.js'
@@ -31,9 +31,9 @@ def register(b):
             p.copy(patch, doc + 'patches/' + patch.name)
         p.copyright('AmerikaBox is a desktop build of BeepBox.\n\n'
                     'BeepBox: Copyright (c) 2012-2024 John Nesky and contributing authors, MIT licence.\n'
-                    f'Source: {lock["upstream"]} at commit {lock["commit"]}. MakBox is not affiliated with BeepBox or John Nesky.\n'
+                    f'Source: {lock["upstream"]} at commit {lock["commit"]}. AltStack Box is not affiliated with BeepBox or John Nesky.\n'
                     'The MIT licence text is in /usr/share/doc/amerika-box/LICENSE-BeepBox.md.\n\n'
                     'lamejs 1.2.0 (LAME MP3 encoder): LGPL-3.0, separate unmodified file; see NOTICE and LICENSE-lamejs.txt.\n\n'
-                    'Amerika additions: Copyright Amerika LLC, GPL-3.0-only (see /usr/share/common-licenses/GPL-3).\n')
+                    'Amerika additions: Copyright AltStack LLC, GPL-3.0-only (see /usr/share/common-licenses/GPL-3).\n')
         return p
     return {'amerika-box': build}

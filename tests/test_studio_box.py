@@ -1,4 +1,4 @@
-"""MakBox: Node tests against BeepBox's real synth (skipped if the dev Node is missing), WAV checks read with Python's
+"""AltStack Box: Node tests against BeepBox's real synth (skipped if the dev Node is missing), WAV checks read with Python's
 wave module, packaging and contract checks. The WebKit rig test lives in src/os/box/test/rig/ (run via tests/rig/studio-rig.sh)."""
 import hashlib
 import json
@@ -23,7 +23,7 @@ class NodeSuite(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         if not NODE:
-            raise unittest.SkipTest('node is not available (expected ../tools/node/bin/node); the MakBox Node tests were NOT run')
+            raise unittest.SkipTest('node is not available (expected ../tools/node/bin/node); the AltStack Box Node tests were NOT run')
         subprocess.run = _REAL_RUN
         cls.out = tempfile.mkdtemp(prefix='box-test-')
         env = dict(os.environ, BOX_TEST_OUT=cls.out)
@@ -88,7 +88,7 @@ class Packaging(unittest.TestCase):
 
     def test_desktop_entry_and_launcher(self):
         d = (BOX / 'applications/amerika-box.desktop').read_text()
-        self.assertIn('Name=MakBox', d)
+        self.assertIn('Name=AltStack Box', d)
         self.assertIn('Exec=amerika-box', d)
         self.assertIn('Icon=amerika-box', d)
         launcher = (BOX / 'bin/amerika-box').read_text()
