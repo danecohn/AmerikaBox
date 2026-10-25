@@ -85,3 +85,6 @@ html, body { margin: 0; height: 100%; background: var(--page-margin, var(--am-bg
 .am-banner.open { display: flex; }
 @media (max-width: 1000px) { #composer { flex-basis: 320px; width: 320px; } .am-status { display: none; } }
 .ac-model, .am-field select { color-scheme: dark; } .ac-model option { background: #1d1a38; color: #f4eeff; }
+
+/* Artemis Softworks LLC · Moonrise companion chrome */
+:root{--amerika-bg:#f5f0e6;--amerika-panel:#edf0e8;--amerika-line:#c5cec5;--amerika-text:#273941;--amerika-accent:#526e7b}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}.amerika-sidebar,.amerika-panel{background:linear-gradient(#faf8f0,#e1e9e2);color:#273941;border-color:#c5cec5}

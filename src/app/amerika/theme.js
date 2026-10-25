@@ -1,14 +1,14 @@
-/* MakBox: the "amerika" colour theme for BeepBox (neon on dark chrome). Derived from BeepBox's own "dark classic"
+/* MakBox: the "amerika" colour theme for BeepBox (Artemis Moonrise glass and coastal tones). Derived from BeepBox's own "dark classic"
  * variables at start-up, so upstream themes stay untouched and new upstream variables are inherited. */
 (function (root) {
 	"use strict";
 	const NS = (root.Amerika = root.Amerika || {});
 	const OVERRIDES = {
-		"--page-margin": "#06050c", "--editor-background": "#0a0814", "--hover-preview": "#ffffff", "--playhead": "#ffb02e",
-		"--primary-text": "#f4eeff", "--secondary-text": "#9b92c4", "--inverted-text": "#0a0814", "--text-selection": "rgba(255,61,240,0.55)",
-		"--box-selection-fill": "rgba(25,227,255,0.18)", "--loop-accent": "#ff3df0", "--link-accent": "#19e3ff",
-		"--ui-widget-background": "#1d1a38", "--ui-widget-focus": "#3a3470", "--pitch-background": "#171433", "--tonic": "#5a3a2a", "--fifth-note": "#1d4560",
-		"--white-piano-key": "#d9d9ee", "--black-piano-key": "#2a2750",
+		"--page-margin": "#e7ece6", "--editor-background": "#f5f0e6", "--hover-preview": "#273941", "--playhead": "#b89463",
+		"--primary-text": "#273941", "--secondary-text": "#657c7c", "--inverted-text": "#f5f0e6", "--text-selection": "rgba(82,110,123,0.25)",
+		"--box-selection-fill": "rgba(82,110,123,0.18)", "--loop-accent": "#86623b", "--link-accent": "#526e7b",
+		"--ui-widget-background": "#dce5df", "--ui-widget-focus": "#b8c8c2", "--pitch-background": "#e3eae4", "--tonic": "#d5c5aa", "--fifth-note": "#c4d6d9",
+		"--white-piano-key": "#faf8f0", "--black-piano-key": "#52636b",
 	};
 	function css() {
 		let base = root.beepbox.ColorConfig.themes["dark classic"];

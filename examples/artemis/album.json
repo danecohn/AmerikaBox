@@ -1,0 +1,303 @@
+{
+  "title": "Lunar Companion",
+  "artist": "Artemis Softworks LLC",
+  "producer": "Artemis Softworks LLC",
+  "founder": "Demetria Althea Cohn",
+  "tracks": [
+    {
+      "id": "01-the-archer",
+      "title": "The Archer",
+      "subtitle": "Artemis Softworks Theme",
+      "bpm": 112,
+      "bars": 64,
+      "style": "theme",
+      "lead": "fm bell",
+      "arp": "pluck",
+      "chords": [
+        [
+          "D3",
+          "F3",
+          "A3",
+          "E4"
+        ],
+        [
+          "Bb2",
+          "D3",
+          "F3",
+          "A3"
+        ],
+        [
+          "F3",
+          "A3",
+          "C4",
+          "G4"
+        ],
+        [
+          "C3",
+          "E3",
+          "G3",
+          "D4"
+        ]
+      ],
+      "roots": [
+        "D2",
+        "Bb1",
+        "F2",
+        "C2"
+      ],
+      "artist": "Artemis Softworks LLC",
+      "album": "Lunar Companion",
+      "seconds": 137.1428798185941,
+      "peakDbfs": -0.971969957772685,
+      "rmsDbfs": -18.575257767033236,
+      "channels": 7,
+      "sampleRate": 44100,
+      "mastering": "Matched RMS target -18.5 dBFS, transparent soft peak limiting; original Box synthesis"
+    },
+    {
+      "id": "02-first-light",
+      "title": "First Light on the Water",
+      "bpm": 94,
+      "bars": 48,
+      "style": "dawn",
+      "lead": "fm electric piano",
+      "arp": "pluck",
+      "chords": [
+        [
+          "F3",
+          "A3",
+          "C4",
+          "E4"
+        ],
+        [
+          "C3",
+          "E3",
+          "G3",
+          "D4"
+        ],
+        [
+          "D3",
+          "F3",
+          "A3",
+          "E4"
+        ],
+        [
+          "Bb2",
+          "D3",
+          "F3",
+          "A3"
+        ]
+      ],
+      "roots": [
+        "F2",
+        "C2",
+        "D2",
+        "Bb1"
+      ],
+      "artist": "Artemis Softworks LLC",
+      "album": "Lunar Companion",
+      "seconds": 122.55319727891157,
+      "peakDbfs": -0.966724470676801,
+      "rmsDbfs": -18.606501860588757,
+      "channels": 7,
+      "sampleRate": 44100,
+      "mastering": "Matched RMS target -18.5 dBFS, transparent soft peak limiting; original Box synthesis"
+    },
+    {
+      "id": "03-silver-thread",
+      "title": "Silver Thread",
+      "bpm": 122,
+      "bars": 64,
+      "style": "pulse",
+      "lead": "pluck",
+      "arp": "fm bell",
+      "chords": [
+        [
+          "D3",
+          "F3",
+          "A3",
+          "C4"
+        ],
+        [
+          "G2",
+          "Bb2",
+          "D3",
+          "F3"
+        ],
+        [
+          "Bb2",
+          "D3",
+          "F3",
+          "A3"
+        ],
+        [
+          "A2",
+          "C#3",
+          "E3",
+          "G3"
+        ]
+      ],
+      "roots": [
+        "D2",
+        "G1",
+        "Bb1",
+        "A1"
+      ],
+      "artist": "Artemis Softworks LLC",
+      "album": "Lunar Companion",
+      "seconds": 125.90165532879818,
+      "peakDbfs": -0.9692287348180746,
+      "rmsDbfs": -18.577377443751168,
+      "channels": 7,
+      "sampleRate": 44100,
+      "mastering": "Matched RMS target -18.5 dBFS, transparent soft peak limiting; original Box synthesis"
+    },
+    {
+      "id": "04-quiet-orbit",
+      "title": "Quiet Orbit",
+      "bpm": 72,
+      "bars": 40,
+      "style": "ambient",
+      "lead": "fm bell",
+      "arp": "fm electric piano",
+      "chords": [
+        [
+          "D3",
+          "F3",
+          "A3",
+          "E4"
+        ],
+        [
+          "Bb2",
+          "D3",
+          "F3",
+          "A3"
+        ],
+        [
+          "G2",
+          "Bb2",
+          "D3",
+          "F3"
+        ],
+        [
+          "C3",
+          "E3",
+          "G3",
+          "D4"
+        ]
+      ],
+      "roots": [
+        "D2",
+        "Bb1",
+        "G1",
+        "C2"
+      ],
+      "artist": "Artemis Softworks LLC",
+      "album": "Lunar Companion",
+      "seconds": 133.3333560090703,
+      "peakDbfs": -2.7376115211027625,
+      "rmsDbfs": -18.50000264303151,
+      "channels": 7,
+      "sampleRate": 44100,
+      "mastering": "Matched RMS target -18.5 dBFS, transparent soft peak limiting; original Box synthesis"
+    },
+    {
+      "id": "05-wildwood-circuit",
+      "title": "Wildwood Circuit",
+      "bpm": 128,
+      "bars": 64,
+      "style": "drive",
+      "lead": "pwm lead",
+      "arp": "pluck",
+      "chords": [
+        [
+          "D3",
+          "F3",
+          "A3",
+          "C4"
+        ],
+        [
+          "F3",
+          "A3",
+          "C4",
+          "E4"
+        ],
+        [
+          "Bb2",
+          "D3",
+          "F3",
+          "A3"
+        ],
+        [
+          "C3",
+          "E3",
+          "G3",
+          "D4"
+        ]
+      ],
+      "roots": [
+        "D2",
+        "F2",
+        "Bb1",
+        "C2"
+      ],
+      "artist": "Artemis Softworks LLC",
+      "album": "Lunar Companion",
+      "seconds": 120,
+      "peakDbfs": -0.9735902043944229,
+      "rmsDbfs": -18.599337230237353,
+      "channels": 7,
+      "sampleRate": 44100,
+      "mastering": "Matched RMS target -18.5 dBFS, transparent soft peak limiting; original Box synthesis"
+    },
+    {
+      "id": "06-home-by-moonlight",
+      "title": "Home by Moonlight",
+      "bpm": 88,
+      "bars": 48,
+      "style": "home",
+      "lead": "fm electric piano",
+      "arp": "fm bell",
+      "chords": [
+        [
+          "D3",
+          "F#3",
+          "A3",
+          "E4"
+        ],
+        [
+          "G2",
+          "B2",
+          "D3",
+          "F#3"
+        ],
+        [
+          "B2",
+          "D3",
+          "F#3",
+          "A3"
+        ],
+        [
+          "A2",
+          "C#3",
+          "E3",
+          "B3"
+        ]
+      ],
+      "roots": [
+        "D2",
+        "G1",
+        "B1",
+        "A1"
+      ],
+      "artist": "Artemis Softworks LLC",
+      "album": "Lunar Companion",
+      "seconds": 130.90909297052156,
+      "peakDbfs": -0.9651193896405709,
+      "rmsDbfs": -18.59905343519472,
+      "channels": 7,
+      "sampleRate": 44100,
+      "mastering": "Matched RMS target -18.5 dBFS, transparent soft peak limiting; original Box synthesis"
+    }
+  ]
+}
