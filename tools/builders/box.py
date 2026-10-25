@@ -20,8 +20,9 @@ def register(b):
         about.write_text(about.read_text().replace('appVersion: "3.1.1"', f'appVersion: "{b.DE_VERSION}"'))
         p.copy(src / 'bin/amerika-box', '/usr/bin/amerika-box', 0o755)
         p.copy(src / 'bin/amerika-box-ogg', '/usr/bin/amerika-box-ogg', 0o755)
+        p.copy(src / 'icons/artemis-box.png', '/usr/share/icons/hicolor/512x512/apps/artemis-box.png')
         p.copy(src / 'applications/amerika-box.desktop', '/usr/share/applications/amerika-box.desktop')
-        # the icon amerika-box.svg ships in amerika-studio (hicolor), which this package depends on
+        # The package owns a distinct Artemis icon; existing studio icon ownership is retained.
         doc = '/usr/share/doc/amerika-box/'
         p.copy(src / 'LICENSE-BeepBox.md', doc + 'LICENSE-BeepBox.md')
         p.copy(src / 'NOTICE', doc + 'NOTICE')
