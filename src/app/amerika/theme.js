@@ -4,11 +4,11 @@
 	"use strict";
 	const NS = (root.Amerika = root.Amerika || {});
 	const OVERRIDES = {
-		"--page-margin": "#e7ece6", "--editor-background": "#f5f0e6", "--hover-preview": "#273941", "--playhead": "#b89463",
-		"--primary-text": "#273941", "--secondary-text": "#657c7c", "--inverted-text": "#f5f0e6", "--text-selection": "rgba(82,110,123,0.25)",
-		"--box-selection-fill": "rgba(82,110,123,0.18)", "--loop-accent": "#86623b", "--link-accent": "#526e7b",
-		"--ui-widget-background": "#dce5df", "--ui-widget-focus": "#b8c8c2", "--pitch-background": "#e3eae4", "--tonic": "#d5c5aa", "--fifth-note": "#c4d6d9",
-		"--white-piano-key": "#faf8f0", "--black-piano-key": "#52636b",
+		"--page-margin": "#edf2fa", "--editor-background": "#f5f5f7", "--hover-preview": "#1d1d1f", "--playhead": "#b89463",
+		"--primary-text": "#1d1d1f", "--secondary-text": "#62646b", "--inverted-text": "#f5f5f7", "--text-selection": "rgba(82,110,123,0.25)",
+		"--box-selection-fill": "rgba(82,110,123,0.18)", "--loop-accent": "#86623b", "--link-accent": "#0066cc",
+		"--ui-widget-background": "#e9eef7", "--ui-widget-focus": "#b8c8c2", "--pitch-background": "#e3eae4", "--tonic": "#d5c5aa", "--fifth-note": "#c4d6d9",
+		"--white-piano-key": "#f8f9fc", "--black-piano-key": "#52636b",
 	};
 	function css() {
 		let base = root.beepbox.ColorConfig.themes["dark classic"];
