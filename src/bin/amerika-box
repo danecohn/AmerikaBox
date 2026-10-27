@@ -7,7 +7,7 @@ if [ -n "$HELPER" ] && command -v ffmpeg >/dev/null 2>&1; then
 	"$HELPER" --watch >/dev/null 2>&1 &
 	HP=$!
 fi
-amerika-studio-webview --app box --dir "$APP" --title MakBox --icon artemis-box --app-id org.amerika.Box "$@"
+amerika-studio-webview --app box --dir "$APP" --title "Cohnsoft Box" --icon artemis-box --app-id org.amerika.Box "$@"
 RC=$?
 [ -n "$HP" ] && kill "$HP" 2>/dev/null
 exit $RC
