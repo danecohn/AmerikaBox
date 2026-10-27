@@ -7,7 +7,7 @@ Goal: turn the laptop into an agentic game-making machine. Four apps where you d
 | **Render** | Blender with an AI modelling assistant | Upstream **Blender** (GPL-3.0+, Ubuntu `blender` 5.0.1 arm64) + our **`amerika_render` add-on** (chat panel, tools driving `bpy`) + Amerika launcher, splash, theme, own config dir. Not a source fork: no multi-day ARM compile, and upstream updates stay free. "Blender" is a trademark of the Blender Foundation: call ours "Render, powered by Blender" and ship Blender's GPL notices. |
 | **Engine** | Godot with an AI game assembler | Upstream **Godot** (MIT, Ubuntu `godot` 4.6.3 arm64; official 4.7.2 arm64 zips exist) + **`amerika_engine` editor plugin** (chat dock, project/scene/script tools, "game recipe" assembler) + launcher/branding/templates. |
 | **Sprite** | pixel-art editor with an AI sprite builder | **Original code** (HTML5 canvas app in a WebKitGTK window). We do NOT copy or modify Aseprite: its source is under a proprietary EULA that forbids redistributing modified builds. Aseprite is only a feature reference; read-only import of `.aseprite` files is allowed to implement from the public file-format spec. |
-| **MakBox** | desktop chiptune maker with an AI composer | **Fork of BeepBox** (MIT, https://github.com/johnnesky/beepbox; keep its licence and credit) built into a desktop app (WebKitGTK window) + AI panel that writes/edits songs through BeepBox's own song JSON. |
+| **Vigil Box** | desktop chiptune maker with an AI composer | **Fork of BeepBox** (MIT, https://github.com/johnnesky/beepbox; keep its licence and credit) built into a desktop app (WebKitGTK window) + AI panel that writes/edits songs through BeepBox's own song JSON. |
 
 ## Shared layer (owner: studio-core)
 

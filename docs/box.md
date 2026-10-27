@@ -1,7 +1,7 @@
-# MakBox
+# Vigil Box
 
-MakBox is a desktop copy of **BeepBox** (John Nesky, MIT) with an AI composer. It runs in the shared
-`amerika-studio-webview` window (see `webview.md`). MakBox is **not affiliated** with BeepBox or John Nesky;
+Vigil Box is a desktop copy of **BeepBox** (John Nesky, MIT) with an AI composer. It runs in the shared
+`amerika-studio-webview` window (see `webview.md`). Vigil Box is **not affiliated** with BeepBox or John Nesky;
 beepbox.co is a separate hosted site. Credit lives in About, `NOTICE`, the package `copyright`, and the licence text
 (`/usr/share/doc/amerika-box/LICENSE-BeepBox.md`).
 

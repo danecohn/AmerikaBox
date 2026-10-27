@@ -1,4 +1,4 @@
-Current product: Cohnsoft Box, maintained by Cohnsoft.
+Current product: Vigil Box, maintained by VigilTech.
 Historical and third-party notices below are retained unchanged.
 
 AmerikaBox
@@ -16,4 +16,4 @@ lamejs 1.2.0 (MP3 encoder, a JavaScript port of LAME)
   Licence: LGPL-3.0, shipped as a separate unmodified file app/amerika/vendor/lame.min.js
   (licence note: app/amerika/vendor/LICENSE-lamejs.txt). LAME: https://lame.sourceforge.io / www.mp3dev.org
 
-Amerika additions (app/amerika/*, launchers, packaging): Copyright Amerika LLC, GPL-3.0-only.
+VigilTech additions (app/amerika/*, launchers, packaging): Copyright VigilTech, GPL-3.0-only.

@@ -1,4 +1,4 @@
-"""Rig: the real MakBox UI inside amerika-studio-webview (WebKitGTK), with a fake Anthropic upstream returning canned
+"""Rig: the real Vigil Box UI inside amerika-studio-webview (WebKitGTK), with a fake Anthropic upstream returning canned
 tool_use turns. Checks: page ready, control endpoint (song.get/set, app.prompt through the tool loop, export.wav, play/stop),
 undo of an AI turn, game export bundle, confinement. Run:  tests/rig/studio-rig.sh src/os/box/test/rig/box_rig.sh
 Screenshots go to dist/studio/box-*.png."""
@@ -78,7 +78,7 @@ try:
     project = paths.project_dir('box')
     win = webview.StudioWebWindow(app, 'box', APP, 'index.html', project, None, paths)
     win.present()
-    spin(lambda: win.page_ready_rpc and win.page_ready_open, timeout=30, what='MakBox ready')
+    spin(lambda: win.page_ready_rpc and win.page_ready_open, timeout=30, what='Vigil Box ready')
     settle(1.0)
     shot(win, 'box-01-startup.png')
     desc = control.read_descriptor('box', paths)

@@ -1,10 +1,10 @@
-/* Cohnsoft Box: About text. The BeepBox licence below is reproduced verbatim from LICENSE.md of the BeepBox source. */
+/* Vigil Box: About text. The BeepBox licence below is reproduced verbatim from LICENSE.md of the BeepBox source. */
 (function (root) {
 	"use strict";
 	const NS = (root.Amerika = root.Amerika || {});
 	NS.about = {
 		appVersion: "3.1.1",
-		publisher: "Cohnsoft",
+		publisher: "VigilTech",
 		founder: "Demetria Althea Cohn",
 		beepboxVersion: "4.2.2",
 		beepboxCommit: "355e510099d230d066d95074c16d748d59fe054c",

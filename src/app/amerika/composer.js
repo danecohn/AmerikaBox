@@ -1,4 +1,4 @@
-/* Cohnsoft Box: the "Composer" side panel and its tool-use loop.
+/* Vigil Box: the "Composer" side panel and its tool-use loop.
  * Talks only to the local Studio bridge through window.amerikaStudio (AIClient / request). No API key lives here. */
 (function (root) {
 	"use strict";
