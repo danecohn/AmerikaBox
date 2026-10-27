@@ -88,9 +88,10 @@ class Packaging(unittest.TestCase):
 
     def test_desktop_entry_and_launcher(self):
         d = (BOX / 'applications/amerika-box.desktop').read_text()
-        self.assertIn('Name=MakBox', d)
+        self.assertIn('Name=Cohnsoft Box', d)
         self.assertIn('Exec=amerika-box', d)
-        self.assertIn('Icon=amerika-box', d)
+        self.assertIn('Icon=artemis-box', d)
+        self.assertIn('StartupWMClass=org.amerika.Box', d)
         launcher = (BOX / 'bin/amerika-box').read_text()
         self.assertIn('amerika-studio-webview --app box', launcher)
         self.assertTrue(os.access(BOX / 'bin/amerika-box', os.X_OK))
